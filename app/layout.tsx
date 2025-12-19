@@ -8,10 +8,10 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Frontend Team 2024 | Un Año de Transformación",
+  title: "Frontend Team 2025 | Un Año de Transformación",
   description:
     "Presentación del equipo Frontend: De un monorepo caótico a un ecosistema moderno, escalable y estandarizado.",
-  generator: "v0.app",
+  generator: "TEAM TTN",
   icons: {
     icon: [
       {
