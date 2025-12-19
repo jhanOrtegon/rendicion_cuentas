@@ -9,6 +9,7 @@ const timelineItems = [
     icon: Box,
     quarter: "Q1",
     title: "App Activo Fijo",
+    link: "https://play.google.com/store/apps/details?id=com.jhankee.myapp&hl=es_419",
     subtitle: "El punto de partida",
     description:
       "Primera aplicación del equipo Frontend. Identificamos oportunidades clave de mejora en arquitectura, rendimiento y estandarización.",
@@ -71,7 +72,15 @@ function TimelineItem({ item, index }: { item: (typeof timelineItems)[0]; index:
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
               {item.quarter} 2025
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">{item.title}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline">
+                  {item.title}
+                </a>
+              ) : (
+                item.title
+              )}
+            </h3>
             <p className="text-sm text-primary font-medium mb-3">{item.subtitle}</p>
             <p className="text-muted-foreground leading-relaxed">{item.description}</p>
           </motion.div>
@@ -104,7 +113,15 @@ function TimelineItem({ item, index }: { item: (typeof timelineItems)[0]; index:
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
               {item.quarter} 2025
             </div>
-            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">{item.title}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline">
+                  {item.title}
+                </a>
+              ) : (
+                item.title
+              )}
+            </h3>
             <p className="text-sm text-primary font-medium mb-3">{item.subtitle}</p>
             <p className="text-muted-foreground leading-relaxed">{item.description}</p>
           </motion.div>
