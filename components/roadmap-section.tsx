@@ -2,46 +2,54 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Compass, TestTube, Cpu, Cloud, Sparkles, ArrowUpRight } from "lucide-react"
+import { Compass, TestTube, ArrowUpRight, Layers, Globe } from "lucide-react"
 
 const roadmapItems = [
   {
     quarter: "Q1",
     year: "2026",
-    title: "Testing Avanzado",
-    desc: "Implementación de Vitest y Testing Library para cobertura completa",
+    title: "Tests Unitarios con Vitest",
+    desc: "Implementación de pruebas unitarias utilizando Vitest para validar componentes y lógica de negocio",
     icon: TestTube,
     status: "planned",
-    features: ["Unit Testing", "Integration Tests", "E2E con Playwright"],
+    features: [
+      "Configuración base de Vitest",
+      "Pruebas de componentes",
+      "Pruebas de hooks y utilidades",
+      "Mocks y spies con Vitest",
+      "Cobertura de código",
+    ],
   },
   {
     quarter: "Q2",
     year: "2026",
-    title: "Micro Frontends",
-    desc: "Evolución hacia arquitectura de micro frontends con Module Federation",
-    icon: Cpu,
-    status: "exploring",
-    features: ["Module Federation", "Independent Deploy", "Shared Components"],
+    title: "Storybook y Documentación de Componentes",
+    desc: "Documentación y validación de componentes UI utilizando Storybook como fuente única de referencia",
+    icon: Layers,
+    status: "planned",
+    features: [
+      "Catálogo de componentes en Storybook",
+      "Documentación de props y estados",
+      "Ejemplos de uso",
+      "Casos de componentes (empty, loading, error)",
+    ],
   },
   {
     quarter: "Q3",
     year: "2026",
-    title: "Edge Computing",
-    desc: "Migración de servicios críticos a edge functions para mejor performance",
-    icon: Cloud,
-    status: "research",
-    features: ["Edge Functions", "CDN Optimization", "Global Distribution"],
+    title: "Internacionalización (i18n)",
+    desc: "Preparación de la aplicación para soportar múltiples idiomas y formatos regionales",
+    icon: Globe,
+    status: "planned",
+    features: [
+      "Soporte multi-idioma",
+      "Gestión centralizada de textos",
+      "Formatos regionales (fechas, monedas)",
+      "Detección y cambio de idioma",
+    ],
   },
-  {
-    quarter: "Q4",
-    year: "2026",
-    title: "AI Integration",
-    desc: "Incorporación de herramientas de AI para desarrollo y código asistido",
-    icon: Sparkles,
-    status: "vision",
-    features: ["AI Code Review", "Auto Documentation", "Smart Refactoring"],
-  },
-]
+];
+
 
 const statusColors = {
   planned: "bg-emerald-500",
